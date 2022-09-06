@@ -1,0 +1,23 @@
+.quiz-wrapper {
+    min-width: max-content;
+    width: 70%;
+}
+
+.custom {
+    max-width: 1250px;
+}
+
+.quiz-header {
+    background-color: #626ed4;
+}
+
+.counter {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.border-style {
+    border: solid 1px #b4b4b4;
+    border-radius: 5px;
+    background-color: #ececec;
+}

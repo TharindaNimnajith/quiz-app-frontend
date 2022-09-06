@@ -1,0 +1,8 @@
+.user-wrapper {
+    min-width: max-content;
+    width: 40%;
+}
+
+.user-header {
+    background-color: #626ed4;
+}
