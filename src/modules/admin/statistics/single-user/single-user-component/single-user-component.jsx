@@ -162,9 +162,9 @@ const SingleUserComponent = props => {
                 </Table>
               </div>
               <div>
-                <h4 className='text-center my-3'>
+                <h5 className='my-3'>
                   Results
-                </h4>
+                </h5>
                 <div className='my-3'>
                   <CSVLink {...csvReport}>
                     Export to CSV

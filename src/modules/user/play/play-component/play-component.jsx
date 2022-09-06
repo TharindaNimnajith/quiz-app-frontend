@@ -16,10 +16,8 @@ import './play-component.css'
 const PlayComponent = () => {
   const appContext = useContext(AppContext)
 
-  const studentAnswers = new Map([])
-
   const [data, setData] = useState('')
-  const [map, setMap] = useState(new Map([]))
+  const [map] = useState(new Map())
 
   const [successModal, setSuccessModal] = useState(false)
   const [modal, setModal] = useState(false)
@@ -77,11 +75,10 @@ const PlayComponent = () => {
     window.location.reload()
   }
 
-  const onChangeValue = async (index, event) => {
-    studentAnswers.set(index, parseInt(event.target.value))
-    if (studentAnswers.size === data.questions.length) {
+  const onChangeValue = (key, value) => {
+    map.set(key, value)
+    if (map.size === data.questions.length) {
       setDisabled(false)
-      setMap(studentAnswers)
     }
   }
 
@@ -277,7 +274,7 @@ const PlayComponent = () => {
                                  value={1}
                                  name={index}
                                  disabled={submitted}
-                                 onChange={event => onChangeValue(index, event)}/>
+                                 onChange={() => onChangeValue(index, 1)}/>
                         </label>
                         <label className='mx-2 col-1 mcq-style'>
                           1)
@@ -294,7 +291,7 @@ const PlayComponent = () => {
                                  value={2}
                                  name={index}
                                  disabled={submitted}
-                                 onChange={event => onChangeValue(index, event)}/>
+                                 onChange={() => onChangeValue(index, 2)}/>
                         </label>
                         <label className='mx-2 col-1 mcq-style'>
                           2)
@@ -311,7 +308,7 @@ const PlayComponent = () => {
                                  value={3}
                                  name={index}
                                  disabled={submitted}
-                                 onChange={event => onChangeValue(index, event)}/>
+                                 onChange={() => onChangeValue(index, 3)}/>
                         </label>
                         <label className='mx-2 col-1 mcq-style'>
                           3)
@@ -328,7 +325,7 @@ const PlayComponent = () => {
                                  value={4}
                                  name={index}
                                  disabled={submitted}
-                                 onChange={event => onChangeValue(index, event)}/>
+                                 onChange={() => onChangeValue(index, 4)}/>
                         </label>
                         <label className='mx-2 col-1 mcq-style'>
                           4)
@@ -345,7 +342,7 @@ const PlayComponent = () => {
                                  value={5}
                                  name={index}
                                  disabled={submitted}
-                                 onChange={event => onChangeValue(index, event)}/>
+                                 onChange={() => onChangeValue(index, 5)}/>
                         </label>
                         <label className='mx-2 col-1 mcq-style'>
                           5)
