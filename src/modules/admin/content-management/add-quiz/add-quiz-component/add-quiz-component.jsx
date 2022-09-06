@@ -1,4 +1,4 @@
-// noinspection ES6CheckImport
+// noinspection ES6CheckImport,DuplicatedCode
 
 import React, {useState} from 'react'
 import axios from 'axios'

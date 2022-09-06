@@ -12,7 +12,6 @@ const SingleUserComponent = props => {
   const [error, setError] = useState('')
   const [loader, setLoader] = useState(false)
 
-  const [userId, setUserId] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
@@ -35,7 +34,6 @@ const SingleUserComponent = props => {
     setLoader(true)
     axios.get(`${usersApi}users/${id}`).then(res => {
       let data = res.data.user
-      setUserId(data.userId)
       setFirstName(data.firstName)
       setLastName(data.lastName)
       setEmail(data.email)
@@ -89,7 +87,7 @@ const SingleUserComponent = props => {
   const csvReport = {
     data: csvData,
     headers: headers,
-    filename: userId + '_' + firstName + '_' + lastName + '.csv'
+    filename: firstName + '_' + lastName + '.csv'
   }
 
   return (
@@ -111,7 +109,7 @@ const SingleUserComponent = props => {
             <div className='user-header'>
               <div className='text-primary text-center p-4'>
                 <h1 className='text-white font-size-20 text-uppercase'>
-                  STUDENT - {userId}
+                  {firstName} {lastName}
                 </h1>
               </div>
             </div>

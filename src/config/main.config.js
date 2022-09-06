@@ -1,2 +1,2 @@
 export const authStoreKey = '@af2021'
-export const baseApi = 'http://localhost:5000/'
+export const baseApi = 'https://ilearn-nie-backend.herokuapp.com/'

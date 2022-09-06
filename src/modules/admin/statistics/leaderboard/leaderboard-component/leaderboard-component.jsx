@@ -1,3 +1,5 @@
+// noinspection JSUnresolvedVariable
+
 import React, {useEffect, useState} from 'react'
 import {Table} from 'reactstrap'
 import axios from 'axios'
@@ -53,7 +55,6 @@ const LeaderboardComponent = props => {
         <Table bordered>
           <thead>
           <tr className='text-center'>
-            <th>User ID</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
@@ -67,9 +68,6 @@ const LeaderboardComponent = props => {
             data && data.map((item, index) => {
               return (
                 <tr key={index}>
-                  <td className='text-center'>
-                    {item.userId}
-                  </td>
                   <td>
                     {item.firstName}
                   </td>

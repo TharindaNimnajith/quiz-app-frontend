@@ -1,13 +1,15 @@
+// noinspection DuplicatedCode,JSUnresolvedVariable
+
 import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import {Card, CardBody, Label} from 'reactstrap'
 import axios from 'axios'
+import parse from 'html-react-parser'
 import {quizzesApi} from '../../../../../config/api.config'
 import Loader from '../../../../../components/loader/loader'
 import ButtonComponent from '../../../../../components/button/button'
 import TextField from '../../../../../components/text-field/text-field'
 import './single-quiz-component.css'
-import parse from "html-react-parser";
 
 const SingleQuizComponent = props => {
   const [error, setError] = useState('')

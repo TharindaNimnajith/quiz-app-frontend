@@ -14,6 +14,10 @@
     background-color: #f8f8f8;
 }
 
+.mcq-style {
+    width: 20px;
+}
+
 body:not(.modal-open) {
     overflow-y: scroll !important;
 }

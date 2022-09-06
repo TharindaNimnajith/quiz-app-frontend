@@ -1,3 +1,5 @@
+// noinspection DuplicatedCode
+
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import {Card, CardBody, Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap'

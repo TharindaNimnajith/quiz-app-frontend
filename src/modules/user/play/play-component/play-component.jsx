@@ -1,3 +1,5 @@
+// noinspection JSUnresolvedVariable
+
 import React, {useContext, useEffect, useState} from 'react'
 import {Input, Label, Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap'
 import axios from 'axios'
@@ -269,76 +271,86 @@ const PlayComponent = () => {
                       </div>
                     </div>
                     <div className='mx-1 mt-4'>
-                      <div className='mt-3'>
-                        <Input type='radio'
-                               value={1}
-                               name={index}
-                               disabled={submitted}
-                               onChange={event => onChangeValue(index, event)}/>
-                        <label className='mx-2'>
+                      <div className='mt-3 row'>
+                        <label className='col-1 mcq-style'>
+                          <Input type='radio'
+                                 value={1}
+                                 name={index}
+                                 disabled={submitted}
+                                 onChange={event => onChangeValue(index, event)}/>
+                        </label>
+                        <label className='mx-2 col-1 mcq-style'>
                           1)
                         </label>
-                        <label>
+                        <label className='col-11'>
                           {
                             parse(item.answer1)
                           }
                         </label>
                       </div>
-                      <div className='mt-2'>
-                        <Input type='radio'
-                               value={2}
-                               name={index}
-                               disabled={submitted}
-                               onChange={event => onChangeValue(index, event)}/>
-                        <label className='mx-2'>
+                      <div className='mt-2 row'>
+                        <label className='col-1 mcq-style'>
+                          <Input type='radio'
+                                 value={2}
+                                 name={index}
+                                 disabled={submitted}
+                                 onChange={event => onChangeValue(index, event)}/>
+                        </label>
+                        <label className='mx-2 col-1 mcq-style'>
                           2)
                         </label>
-                        <label>
+                        <label className='col-11'>
                           {
                             parse(item.answer2)
                           }
                         </label>
                       </div>
-                      <div className='mt-2'>
-                        <Input type='radio'
-                               value={3}
-                               name={index}
-                               disabled={submitted}
-                               onChange={event => onChangeValue(index, event)}/>
-                        <label className='mx-2'>
+                      <div className='mt-2 row'>
+                        <label className='col-1 mcq-style'>
+                          <Input type='radio'
+                                 value={3}
+                                 name={index}
+                                 disabled={submitted}
+                                 onChange={event => onChangeValue(index, event)}/>
+                        </label>
+                        <label className='mx-2 col-1 mcq-style'>
                           3)
                         </label>
-                        <label>
+                        <label className='col-11'>
                           {
                             parse(item.answer3)
                           }
                         </label>
                       </div>
-                      <div className='mt-2'>
-                        <Input type='radio'
-                               value={4}
-                               name={index}
-                               disabled={submitted}
-                               onChange={event => onChangeValue(index, event)}/>
-                        <label className='mx-2'>
+                      <div className='mt-2 row'>
+                        <label className='col-1 mcq-style'>
+                          <Input type='radio'
+                                 value={4}
+                                 name={index}
+                                 disabled={submitted}
+                                 onChange={event => onChangeValue(index, event)}/>
+                        </label>
+                        <label className='mx-2 col-1 mcq-style'>
                           4)
                         </label>
-                        <label>
+                        <label className='col-11'>
                           {
                             parse(item.answer4)
                           }
                         </label>
                       </div>
-                      <div className='mt-2'>
-                        <Input type='radio'
-                               value={5}
-                               name={index}
-                               disabled={submitted}
-                               onChange={event => onChangeValue(index, event)}/>
-                        <label className='mx-2'>
+                      <div className='mt-2 row'>
+                        <label className='col-1 mcq-style'>
+                          <Input type='radio'
+                                 value={5}
+                                 name={index}
+                                 disabled={submitted}
+                                 onChange={event => onChangeValue(index, event)}/>
+                        </label>
+                        <label className='mx-2 col-1 mcq-style'>
                           5)
                         </label>
-                        <label>
+                        <label className='col-11'>
                           {
                             parse(item.answer5)
                           }
