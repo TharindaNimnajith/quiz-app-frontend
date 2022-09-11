@@ -25,9 +25,9 @@ const AdminDashboardComponent = props => {
 
   return (
     <div className='card-group justify-content-evenly'>
-      <div className='my-5 card-style-admin'
+      <div className='mt-5 card-style-admin'
            onClick={onUsers}>
-        <Card className='overflow-hidden m-5'>
+        <Card className='overflow-hidden mt-5 mx-4'>
           <CardBody className='p-4 text-center text-uppercase'>
             <div className='m-4'>
               <i className='fa fa-fw fa-user mx-2 my-1 card-icon-admin'/>
@@ -38,9 +38,9 @@ const AdminDashboardComponent = props => {
           </CardBody>
         </Card>
       </div>
-      <div className='my-5 card-style-admin'
+      <div className='mt-5 card-style-admin'
            onClick={onLeaderboard}>
-        <Card className='overflow-hidden m-5'>
+        <Card className='overflow-hidden mt-5 mx-4'>
           <CardBody className='p-4 text-center text-uppercase'>
             <div className='m-4'>
               <i className='fa fa-fw fa-ranking-star mx-2 my-1 card-icon-admin'/>
@@ -51,9 +51,9 @@ const AdminDashboardComponent = props => {
           </CardBody>
         </Card>
       </div>
-      <div className='my-5 card-style-admin'
+      <div className='mt-5 card-style-admin'
            onClick={onContent}>
-        <Card className='overflow-hidden m-5'>
+        <Card className='overflow-hidden mt-5 mx-4'>
           <CardBody className='p-4 text-center text-uppercase'>
             <div className='m-4'>
               <i className='fa fa-fw fa-book mx-2 my-1 card-icon-admin'/>
@@ -64,9 +64,9 @@ const AdminDashboardComponent = props => {
           </CardBody>
         </Card>
       </div>
-      <div className='my-5 card-style-admin'
+      <div className='mt-5 card-style-admin'
            onClick={onNewQuiz}>
-        <Card className='overflow-hidden m-5'>
+        <Card className='overflow-hidden mt-5 mx-4'>
           <CardBody className='p-4 text-center text-uppercase'>
             <div className='m-4'>
               <i className='fa fa-fw fa-question mx-2 my-1 card-icon-admin'/>
@@ -77,9 +77,9 @@ const AdminDashboardComponent = props => {
           </CardBody>
         </Card>
       </div>
-      <div className='my-5 card-style-admin'
+      <div className='mt-5 card-style-admin'
            onClick={onSettings}>
-        <Card className='overflow-hidden m-5'>
+        <Card className='overflow-hidden mt-5 mx-4'>
           <CardBody className='p-4 text-center text-uppercase'>
             <div className='m-4'>
               <i className='fa fa-fw fa-gear mx-2 my-1 card-icon-admin'/>
