@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import {admin, all, user} from './shared/user-types'
+import {admin, all, user} from './config/user-types'
 import RouteFilter from './routes/route-filter'
 import Login from './modules/shared/login/login'
 import Register from './modules/shared/register/register'

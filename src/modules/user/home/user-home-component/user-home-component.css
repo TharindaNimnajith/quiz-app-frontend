@@ -1,13 +1,12 @@
-.text {
-    color: white;
-    font-size: xx-large;
+.card-style {
+    width: 500px;
 }
 
-.text h3 {
-    color: white;
-    font-size: xxx-large;
+.card-icon {
+    font-size: 100px;
+    color: #c21313;
 }
 
-.to-back {
-    z-index: -1;
+.card-label {
+    font-size: 25px;
 }

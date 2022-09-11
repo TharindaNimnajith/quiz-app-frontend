@@ -1,70 +1,95 @@
-import React, {useState} from 'react'
-import {Carousel, CarouselCaption, CarouselControl, CarouselIndicators, CarouselItem} from 'reactstrap'
-import {carousel1} from '../../../../shared/images'
+import React from 'react'
+import {Card, CardBody} from 'reactstrap'
 import './admin-dashboard-component.css'
 
-const AdminDashboardComponent = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [animating, setAnimating] = useState(false)
-
-  const next = () => {
-    if (animating) {
-      return
-    }
-    const nextIndex = activeIndex === carousel1.length - 1 ? 0 : activeIndex + 1
-    setActiveIndex(nextIndex)
+const AdminDashboardComponent = props => {
+  const onUsers = async () => {
+    props.history.push('/user-management')
   }
 
-  const previous = () => {
-    if (animating) {
-      return
-    }
-    const nextIndex = activeIndex === 0 ? carousel1.length - 1 : activeIndex - 1
-    setActiveIndex(nextIndex)
+  const onLeaderboard = async () => {
+    props.history.push('/leaderboard')
   }
 
-  const goToIndex = (newIndex) => {
-    if (animating) {
-      return
-    }
-    setActiveIndex(newIndex)
+  const onContent = async () => {
+    props.history.push('/content-management')
   }
 
-  const slides = carousel1.map((item, index) => {
-    return (
-      <CarouselItem key={index}
-                    onExiting={() => setAnimating(true)}
-                    onExited={() => setAnimating(false)}>
-        <div align='center'>
-          <img src={item.src}
-               alt={item.altText}
-               width={item.width}
-               height={item.height}/>
-        </div>
-        <CarouselCaption captionHeader={item.captionHeader}
-                         captionText={item.captionText}
-                         className='text'/>
-      </CarouselItem>
-    )
-  })
+  const onNewQuiz = async () => {
+    props.history.push('/add-quiz')
+  }
+
+  const onSettings = async () => {
+    props.history.push('/settings')
+  }
 
   return (
-    <div>
-      <Carousel activeIndex={activeIndex}
-                next={next}
-                previous={previous}
-                className='to-back'>
-        <CarouselIndicators items={carousel1}
-                            activeIndex={activeIndex}
-                            onClickHandler={goToIndex}/>
-        {slides}
-        <CarouselControl direction='prev'
-                         directionText='Previous'
-                         onClickHandler={previous}/>
-        <CarouselControl direction='next'
-                         directionText='Next'
-                         onClickHandler={next}/>
-      </Carousel>
+    <div className='card-group justify-content-evenly'>
+      <div className='my-5 card-style-admin'
+           onClick={onUsers}>
+        <Card className='overflow-hidden m-5'>
+          <CardBody className='p-4 text-center text-uppercase'>
+            <div className='m-4'>
+              <i className='fa fa-fw fa-user mx-2 my-1 card-icon-admin'/>
+            </div>
+            <label className='m-2 card-label'>
+              Users
+            </label>
+          </CardBody>
+        </Card>
+      </div>
+      <div className='my-5 card-style-admin'
+           onClick={onLeaderboard}>
+        <Card className='overflow-hidden m-5'>
+          <CardBody className='p-4 text-center text-uppercase'>
+            <div className='m-4'>
+              <i className='fa fa-fw fa-ranking-star mx-2 my-1 card-icon-admin'/>
+            </div>
+            <label className='m-2 card-label'>
+              Leaderboard
+            </label>
+          </CardBody>
+        </Card>
+      </div>
+      <div className='my-5 card-style-admin'
+           onClick={onContent}>
+        <Card className='overflow-hidden m-5'>
+          <CardBody className='p-4 text-center text-uppercase'>
+            <div className='m-4'>
+              <i className='fa fa-fw fa-book mx-2 my-1 card-icon-admin'/>
+            </div>
+            <label className='m-2 card-label'>
+              Content
+            </label>
+          </CardBody>
+        </Card>
+      </div>
+      <div className='my-5 card-style-admin'
+           onClick={onNewQuiz}>
+        <Card className='overflow-hidden m-5'>
+          <CardBody className='p-4 text-center text-uppercase'>
+            <div className='m-4'>
+              <i className='fa fa-fw fa-question mx-2 my-1 card-icon-admin'/>
+            </div>
+            <label className='m-2 card-label'>
+              New Quiz
+            </label>
+          </CardBody>
+        </Card>
+      </div>
+      <div className='my-5 card-style-admin'
+           onClick={onSettings}>
+        <Card className='overflow-hidden m-5'>
+          <CardBody className='p-4 text-center text-uppercase'>
+            <div className='m-4'>
+              <i className='fa fa-fw fa-gear mx-2 my-1 card-icon-admin'/>
+            </div>
+            <label className='m-2 card-label'>
+              Settings
+            </label>
+          </CardBody>
+        </Card>
+      </div>
     </div>
   )
 }

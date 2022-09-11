@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react'
 import {Redirect, Route} from 'react-router-dom'
-import {admin, all, user} from '../shared/user-types'
+import {admin, all, user} from '../config/user-types'
 import {AppContext} from '../global/app-context'
 import {checkUserInLocalStorage} from '../helpers/local-storage.helpers'
 import Loader from '../components/loader/loader'

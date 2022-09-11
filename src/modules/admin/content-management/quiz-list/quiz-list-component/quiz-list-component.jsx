@@ -1,18 +1,7 @@
 // noinspection DuplicatedCode,JSUnresolvedVariable
 
 import React, {useEffect, useState} from 'react'
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardGroup,
-  CardText,
-  CardTitle,
-  Modal,
-  ModalBody,
-  ModalFooter,
-  ModalHeader
-} from 'reactstrap'
+import {Card, CardBody, CardFooter, CardText, CardTitle, Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap'
 import axios from 'axios'
 import {quizzesApi} from '../../../../../config/api.config'
 import Loader from '../../../../../components/loader/loader'
@@ -161,46 +150,44 @@ const QuizListComponent = props => {
                          disabled={false}
                          onClickFn={onNewQuiz}/>
       </div>
-      <div>
-        <CardGroup>
-          {
-            data && data.map((item, index) => {
-              return (
-                <div key={index}
-                     className='card-width'>
-                  <Card title='View Quiz'
-                        className='m-4'>
-                    <CardBody onClick={() => onView(item._id)}>
-                      <CardTitle className='text-uppercase text-center m-4'
-                                 tag='h2'>
-                        <label>
-                          {item.quizTitle}
-                        </label>
-                      </CardTitle>
-                      <CardText className='m-4 text-center'>
-                        <label>
-                          Lesson: {item.lesson}
-                        </label>
-                      </CardText>
-                      <CardText className='m-4 text-center'>
-                        <label>
-                          Level: {item.quizLevel}
-                        </label>
-                      </CardText>
-                    </CardBody>
-                    <CardFooter>
-                      <div className='text-center m-2'>
-                        <i className='fas fa-trash-alt delete'
-                           title='Delete Quiz'
-                           onClick={() => onDelete(item._id)}/>
-                      </div>
-                    </CardFooter>
-                  </Card>
-                </div>
-              )
-            })
-          }
-        </CardGroup>
+      <div className='card-group justify-content-evenly'>
+        {
+          data && data.map((item, index) => {
+            return (
+              <div key={index}
+                   className='card-width'>
+                <Card title='View Quiz'
+                      className='m-4'>
+                  <CardBody onClick={() => onView(item._id)}>
+                    <CardTitle className='text-uppercase text-center m-4'
+                               tag='h2'>
+                      <label>
+                        {item.quizTitle}
+                      </label>
+                    </CardTitle>
+                    <CardText className='m-4 text-center'>
+                      <label>
+                        Lesson: {item.lesson}
+                      </label>
+                    </CardText>
+                    <CardText className='m-4 text-center'>
+                      <label>
+                        Level: {item.quizLevel}
+                      </label>
+                    </CardText>
+                  </CardBody>
+                  <CardFooter>
+                    <div className='text-center m-2'>
+                      <i className='fas fa-trash-alt delete'
+                         title='Delete Quiz'
+                         onClick={() => onDelete(item._id)}/>
+                    </div>
+                  </CardFooter>
+                </Card>
+              </div>
+            )
+          })
+        }
       </div>
     </div>
   )
